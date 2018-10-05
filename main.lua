@@ -57,14 +57,15 @@ Citizen.CreateThread(function()
         
       if IsControlJustReleased(0, 311) and GetLastInputMethod(0) then
         beltOn = not beltOn 
-        if beltOn then TriggerEvent("pNotify:SendNotification", {text = "Seatbelt On", type = "success", timeout = 1400, layout = "centerLeft"})
+        if beltOn then 
+			TriggerEvent("pNotify:SendNotification", {text = "Seatbelt On", type = "success", timeout = 1400, layout = "centerLeft"})
 			
 			SendNUIMessage({
 			   displayWindow = 'false'
 			   })
 			isUiOpen = true 
 		else 
-		TriggerEvent("pNotify:SendNotification", {text = "Seatbelt Off", type = "error", timeout = 1400, layout = "centerLeft"}) 
+			TriggerEvent("pNotify:SendNotification", {text = "Seatbelt Off", type = "error", timeout = 1400, layout = "centerLeft"}) 
 
 			SendNUIMessage({
 			   displayWindow = 'true'
