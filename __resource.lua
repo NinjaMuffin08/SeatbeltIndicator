@@ -9,5 +9,4 @@ files {
 	'html/app.js',
 	'html/style.css',
 	'img/seatbelt.png'
-	
 }
